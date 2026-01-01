@@ -1,0 +1,428 @@
+/* Layout */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 10px 10px;
+  background-image: linear-gradient(black, $color-base-secondary 70%);
+  border-bottom: 10px groove $color-black;
+
+  &-feed {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+
+    &-line {
+      display: inline-block;
+      white-space: nowrap;
+      font-family: $font-menlo;
+      color: $color-white;
+      animation: feedline 20s linear infinite;
+    }
+  }
+
+  &-container {
+    display: flex;
+
+    .header-maincontent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      padding: 20px 20px 10px 20px;
+      border: 2px solid $color-border-primary;
+      @include borderDefault;
+  
+      .logo {
+        display: flex;
+        align-items: center;
+        
+        &-link {
+          margin-right: 25px;
+          font-size: 4em;
+          color: $color-violet;
+        }
+  
+        &-heading {
+          font-family: $font-tourney;
+          font-size: 3em;
+          text-transform: uppercase;
+          color: $color-green;
+        }
+  
+      }
+  
+      .author {
+        font-family: monospace;
+        align-self: flex-end;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+/* NAVIGATION */
+
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  top: 185px;
+  left: 5px;
+  // top: 5px;
+  // left: 0;
+  
+  @media screen and (max-width: 992px) {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-btn {
+    display: block;
+    padding: 5px 10px;
+    font-size: 2em;
+    @include borderDefault;
+    background-color: $color-base-secondary;
+    text-decoration: none;
+    color: $color-white;
+    // background-color: $color-green;
+    // color: $color-white;
+
+    &:hover {
+      background-color: black;
+      transform: scale(1.05);
+    }
+    .fa-solid {
+      cursor: pointer;
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  left: -100vw;
+  top: 243px;
+  min-width: 30%;
+  background-image: linear-gradient(to left, black, $color-base-secondary 70%);
+  border-radius: 15px 7px 7px 15px;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  &-menu-list {
+    font-size: 2em;
+    font-family: $font-tourney;
+    list-style: none;
+    
+    &-link {
+      text-decoration: none;
+      color: $color-white;
+    }
+    
+    &-entry {
+      padding: 20px 20px;
+      border-bottom: 2px dashed $color-border-primary;
+      border-radius: 0 0 7px 15px;
+
+      &:hover {
+        background-color: $color-base-secondary;
+        transform: scale(1.05);
+      }
+
+      .menu-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* MAIN WRAPPER */
+
+.main-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* BANNER */
+  .banner-left {
+    width: 20%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: $color-darkorange;
+    font-family: $font-monaco;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      align-items: center;
+    }
+
+    &-image {
+      max-width: 400px;
+      margin: 100px 10px 10px 10px;
+      border-radius: 0 50px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+
+    &-text {
+      padding: 10px;
+      margin: 20px 10px 50px 10px;
+      background-color: $color-base-secondary;
+      @include borderDefault;
+    }
+  }
+
+  /* MAIN */
+
+  .main {
+    width: 80%;
+    color: $color-white;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    .navbar {
+      display: none;
+      padding: 10px 10px 5px 10px;
+      border-bottom: 2px solid $color-border-primary;
+
+      @media screen and (min-width: 992px) {
+        display: flex;
+      }
+
+      .navtab {
+        padding: 10px 20px;
+        border: 4px outset $color-border-primary;
+        border-radius: 0 20px 0 0;
+
+        &-link {
+          display: flex;
+          text-decoration: none;
+          font-family: $font-tourney;
+          font-size: 2em;
+          color: $color-white;
+
+          .tab-icon {
+            margin-right: 10px;
+          }
+        }
+
+        &:hover {
+          background-color: black;
+          transform: scale(1.10) rotate(-2deg);
+        }
+
+        &.tab-active {
+          background-color: lighten($color-base-secondary, 5%);
+        }
+      }
+    }
+
+    .maincontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 10px;
+      padding: 40px;
+      background-color: $color-black;
+      border: 2px solid $color-border-primary;
+
+      @media screen and (max-width: 768px) {
+        padding: 20px;
+      }
+
+      &-heading {
+        text-align: center;
+        font-family: $font-roboto-mono;
+        color: $color-yellow;
+      }
+
+      &-paragraph {
+        margin: 20px 0;
+        font-size: 20px;
+        font-family: $font-monaco;
+        color: $color-lightblue;
+
+        .fa-code {
+          color: $color-violet;
+        }
+      }
+
+      .about-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 10px;
+
+        &-card {
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 20px;
+          padding: 10px;
+          @include borderDefault;
+          background-color: $color-base-secondary;
+
+          .card-icon {
+            padding: 10px;
+            color: $color-darkorange;
+          }
+
+          .card-title {
+            padding: 10px;
+            font-family: $font-menlo;
+            color: $color-violet;
+          }
+
+          .card-desc {
+            padding: 10px;
+            font-family: $font-monaco;
+            color: $color-lightblue;
+            text-align: center;
+            list-style: none;
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+
+
+      }
+
+      .location {
+        margin: 20px 10px;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(black, $color-base-secondary 70%);
+
+  &-nav {
+    font-family: $font-tourney;
+    list-style: none;
+
+    &-link {
+      display: flex;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: $color-green;
+
+      .fa-solid {
+        margin-right: 10px;
+      }
+
+      &:hover {
+          background-color: black;
+          transform: scale(1.05);
+        }
+    }
+  }
+
+  &-copyright {
+    font-family: $font-menlo;
+    text-align: center;
+    color: $color-white;
+  }
+
+}
+
+.download-cv {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: flex-start;
+  z-index: 50;
+
+  // Show hint when hovering anywhere in the container
+  &:hover &-hint {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-hint {
+    padding: 5px 10px;
+    border: 2px solid $color-border-primary;
+    border-radius: 12px 12px 0 12px;
+    background-color: $color-white;
+    font-family: $font-menlo;
+    color: $color-black;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 2px solid $color-border-primary;
+    border-radius: 50%;
+    background-color:  $color-green;
+    font-family: $font-menlo;
+    font-weight: bold;
+    font-size: 30px;
+    color: $color-white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  
+    &:hover {
+      background-color: transparentize( $color-green, 0.5);
+      transform: scale(1.10);
+    }
+  }
+}
+
+/* SHOW AND HIDE MENU */
+
+.menu-checkbox:checked~.nav {
+  left: 0px;
+  transition: left 0.4s ease-in-out;
+}
+
+/* ANIMATIONS */
+
+@keyframes feedline {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
