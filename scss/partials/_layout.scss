@@ -275,8 +275,13 @@
         padding: 20px 40px;
         font-family: $font-menlo; 
         color: $color-violet;
+        background-color: $color-base-secondary;
         @include borderDefault;
         text-decoration: none;
+
+        &:hover {
+          background-color: $color-black;
+        }
       }
 
       .about-info {

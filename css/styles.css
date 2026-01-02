@@ -260,9 +260,13 @@ body {
   padding: 20px 40px;
   font-family: "Menlo", sans-serif;
   color: rgb(188, 137, 189);
+  background-color: rgb(41, 41, 41);
   border: 2px solid rgb(64, 64, 64);
   border-radius: 12px;
   text-decoration: none;
+}
+.main-wrapper .main .maincontent-link-button:hover {
+  background-color: rgb(24, 24, 24);
 }
 .main-wrapper .main .maincontent .about-info {
   display: flex;
