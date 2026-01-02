@@ -256,6 +256,14 @@ body {
 .main-wrapper .main .maincontent-paragraph .fa-code {
   color: rgb(188, 137, 189);
 }
+.main-wrapper .main .maincontent-link-button {
+  padding: 20px 40px;
+  font-family: "Menlo", sans-serif;
+  color: rgb(188, 137, 189);
+  border: 2px solid rgb(64, 64, 64);
+  border-radius: 12px;
+  text-decoration: none;
+}
 .main-wrapper .main .maincontent .about-info {
   display: flex;
   flex-wrap: wrap;

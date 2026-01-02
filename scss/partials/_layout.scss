@@ -271,6 +271,14 @@
         }
       }
 
+      &-link-button {
+        padding: 20px 40px;
+        font-family: $font-menlo; 
+        color: $color-violet;
+        @include borderDefault;
+        text-decoration: none;
+      }
+
       .about-info {
         display: flex;
         flex-wrap: wrap;
