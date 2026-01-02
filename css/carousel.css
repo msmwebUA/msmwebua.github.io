@@ -135,10 +135,16 @@
   color: rgb(196, 148, 124);
 }
 .project-info-subtitle {
+  margin-top: 20px;
+  padding: 10px 0;
   font-family: "Menlo", sans-serif;
   color: rgb(188, 137, 189);
 }
 .project-info-desc {
   font-family: "Monaco", sans-serif;
   color: rgb(170, 218, 250);
+}
+.project-info-subtitle-icon {
+    margin-right: 10px;
+    color: rgb(196, 148, 124);
 }
