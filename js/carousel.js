@@ -46,7 +46,7 @@ function goToSlide(index) {
 function startAutoPlay() {
     autoPlayInterval = setInterval(() => {
         showSlide(currentSlide + 1);
-    }, 20000); // Change slide every 20 seconds
+    }, 120000); // Change slide every 2 minutes
 }
 
 // Reset auto play when user interacts
