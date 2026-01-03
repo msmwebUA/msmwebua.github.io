@@ -139,10 +139,14 @@
                   </div>
                   <!-- slide 4 -->
                   <div class="carousel-slide" id="project-slide4">
-                      <img src="img/qr-integration.png" alt="QR-code integration">
+                      <img src="img/sop.png" alt="SOP-Manager">
                   </div>
                   <!-- slide 5 -->
                   <div class="carousel-slide" id="project-slide5">
+                      <img src="img/qr-integration.png" alt="QR-code integration">
+                  </div>
+                  <!-- slide 6 -->
+                  <div class="carousel-slide" id="project-slide6">
                       <img src="img/video-surveillance.png" alt="Video surveillance">
                   </div>
               </div>
@@ -162,6 +166,7 @@
                   <button class="carousel-indicator" onclick="goToSlide(2)"></button>
                   <button class="carousel-indicator" onclick="goToSlide(3)"></button>
                   <button class="carousel-indicator" onclick="goToSlide(4)"></button>
+                  <button class="carousel-indicator" onclick="goToSlide(5)"></button>
               </div>
             </div>
           </div>
@@ -199,7 +204,7 @@
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
             <p class="project-info-desc">
-              Developed 2021-2024 in Savonlinna, Finland
+              Developed 2021-2024 in Savonlinna, Finland. Customer: JSM OY.
             </p>
           </div>
           <!-- project info 2 -->
@@ -234,7 +239,7 @@
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
             <p class="project-info-desc">
-              Developed 2023-2025 in Savonlinna, Finland
+              Developed 2023-2025 in Savonlinna, Finland. Customer: JSM OY.
             </p>
           </div>
           <!-- project info 3 -->
@@ -264,59 +269,116 @@
             <h3 class="project-info-subtitle"><span class="fa-solid fa-wrench project-info-subtitle-icon"></span>Technical Part</h3>
             <p class="project-info-desc">
               The architecture of the application supports horizontal scaling through multiple container instances 
-              and database schema separation for multi-tenant deployment. Cloud-hosted infrastructure.
+              and database schema separation for multi-tenant deployment. Cloud-hosted infrastructure. 
+              The web application supports QR and barcode scanning via the device camera and includes built-in label printer integration.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
             <p class="project-info-desc">
-              Developed 2023-2024 in Savonlinna, Finland
+              Developed 2023-2024 in Savonlinna, Finland. Primary customer: Autohuolto Kovanen OY.
             </p>
           </div>
           <!-- project info 4 -->
           <div class="project-info" id="info-slide4">
-            <h2 class="project-info-title">Hardware integration</h2>
+            <h2 class="project-info-title">SOP-Manager</h2>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-circle-question project-info-subtitle-icon"></span>Problem</h3>
             <p class="project-info-desc">
-              Here is description
+              The company's warehouse lacked an efficient system for locating components and tracking inventory. 
+              Workers spent unnecessary time searching for items, and real-time inventory monitoring was difficult. 
+              Although the company had an ERP system, it didn't provide dedicated tools for warehouse floor operations, 
+              slowing down production processes.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-lightbulb project-info-subtitle-icon"></span>Solution</h3>
             <p class="project-info-desc">
-              Here is description
+              We developed SOP-Manager (Storage Order Pickup Manager), a web application that integrates directly with the 
+              company's existing ERP system and database. The application helps workers locate components in the warehouse, 
+              manage item pickups, and monitor total inventory balances. It streamlines warehouse operations through user-created 
+              templates that organize and optimize material handling processes. Built as a standalone module, 
+              the application communicates directly with the organization's database without disrupting existing workflows.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-flag project-info-subtitle-icon"></span>Result</h3>
             <p class="project-info-desc">
-              Here is description
+              The application successfully enhanced warehouse efficiency by providing workers with quick access to location 
+              data and inventory information. Template-based workflows reduced the time needed for routine picking operations, 
+              and real-time inventory tracking improved production planning accuracy.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-wrench project-info-subtitle-icon"></span>Technical Part</h3>
             <p class="project-info-desc">
-              Here is description
+              The system uses ODBC drivers (unixODBC, MySQL-connector) to establish database links with the client's MariaDB database. 
+              Oracle ORDS acts as a proxy server managing application connectivity. The architecture maintains security through firewall configuration 
+              while enabling direct communication between the application and the client's existing database infrastructure. 
+              Progressive Web App (PWA) technology allows installation on devices for quick access.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
             <p class="project-info-desc">
-              Here is description
+              Developed January-February 2025 in Savonlinna, Finland. Customer: eLive Ecosystem OY.
             </p>
           </div>
           <!-- project info 5 -->
           <div class="project-info" id="info-slide5">
-            <h2 class="project-info-title">Video surveillance system</h2>
+            <h2 class="project-info-title">Production Label Terminals</h2>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-circle-question project-info-subtitle-icon"></span>Problem</h3>
             <p class="project-info-desc">
-              Here is description
+              Production tracking at the enterprise required workers to manually record their output, 
+              leading to inconsistencies and time waste. Employees needed a quick way to label manufactured products 
+              with tracking codes that would later be scanned in the warehouse for performance monitoring and inventory control.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-lightbulb project-info-subtitle-icon"></span>Solution</h3>
             <p class="project-info-desc">
-              Here is description
+              We developed autonomous label printing terminals positioned directly at production workstations. 
+              Each terminal consists of a single-board computer (SBC) connected to a touchscreen display, 
+              RFID card reader, and label printer. Workers simply scan their personal RFID card containing 
+              their employee ID, enter the quantity of labels needed through the touch interface, 
+              and receive printed stickers immediately. The labeled products are later scanned in the warehouse, 
+              automatically recording both employee performance metrics and product tracking data.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-flag project-info-subtitle-icon"></span>Result</h3>
             <p class="project-info-desc">
-              Here is description
+              The terminals streamlined the production labeling process, eliminating manual recording and reducing 
+              workflow interruptions. Workers gained instant access to label printing at their workstations, 
+              while management received accurate, real-time production data.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-wrench project-info-subtitle-icon"></span>Technical Part</h3>
             <p class="project-info-desc">
-              Here is description
+              Single-board computer running a custom application with touchscreen interface. 
+              System integrated with RFID card readers for employee identification and thermal label printers for sticker output. 
+              The terminals operate within the network communicating with the database to log production data.
             </p>
             <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
             <p class="project-info-desc">
-              Here is description
+              2025 Savonlinna, Finland. Customer: JSM OY.
+            </p>
+          </div>
+          <!-- project info 6 -->
+          <div class="project-info" id="info-slide6">
+            <h2 class="project-info-title">Video surveillance system</h2>
+            <h3 class="project-info-subtitle"><span class="fa-solid fa-circle-question project-info-subtitle-icon"></span>Problem</h3>
+            <p class="project-info-desc">
+              The customer needed comprehensive video surveillance coverage across multiple locations, 
+              including both indoor facilities and open outdoor areas. Existing security measures were insufficient 
+              for monitoring large territories and preventing incidents.
+            </p>
+            <h3 class="project-info-subtitle"><span class="fa-solid fa-lightbulb project-info-subtitle-icon"></span>Solution</h3>
+            <p class="project-info-desc">
+              We designed and implemented a multi-location video surveillance system with over 10 cameras strategically 
+              positioned across the customer's facilities.
+            </p>
+            <h3 class="project-info-subtitle"><span class="fa-solid fa-flag project-info-subtitle-icon"></span>Result</h3>
+            <p class="project-info-desc">
+              The customer received comprehensive surveillance coverage across all critical areas with reliable 24/7 monitoring capabilities.
+              The hybrid connection approach (PoE and Wi-Fi) ensured stable operation in diverse environments while minimizing installation complexity. 
+              High-quality recording and the alert system significantly improved security management.
+            </p>
+            <h3 class="project-info-subtitle"><span class="fa-solid fa-wrench project-info-subtitle-icon"></span>Technical Part</h3>
+            <p class="project-info-desc">
+              Network infrastructure designed to support both wired (PoE) and wireless camera connections. 
+              Long-Range Outdoor Wi-Fi Access Points for extended coverage in open areas. 
+              Multi-channel DVRs configured for continuous high-resolution video recording and storage. 
+              Custom network configuration optimized for video streaming bandwidth and reliability. 
+              Alert system integrated with DVR software for motion detection and event notifications.
+            </p>
+            <h3 class="project-info-subtitle"><span class="fa-solid fa-calendar project-info-subtitle-icon"></span>Time and Place</h3>
+            <p class="project-info-desc">
+              2021-2022 Kumpuranta, Kerimäki, Savonlinna. Customer: JSM OY.
             </p>
           </div>
 
