@@ -60,16 +60,31 @@ body {
   font-size: 4em;
   color: rgb(188, 137, 189);
 }
+@media screen and (max-width: 440px) {
+  .header-container .header-maincontent .logo-link {
+    font-size: 13vw;
+  }
+}
 .header-container .header-maincontent .logo-heading {
   font-family: "Tourney", sans-serif;
   font-size: 3em;
   text-transform: uppercase;
   color: rgb(114, 149, 92);
 }
+@media screen and (max-width: 440px) {
+  .header-container .header-maincontent .logo-heading {
+    font-size: 11vw;
+  }
+}
 .header-container .header-maincontent .author {
   font-family: monospace;
   align-self: flex-end;
   color: rgb(204, 204, 204);
+}
+@media screen and (max-width: 440px) {
+  .header-container .header-maincontent .author {
+    font-size: 3vw;
+  }
 }
 
 /* NAVIGATION */
@@ -175,6 +190,11 @@ body {
   margin: 100px 10px 10px 10px;
   border-radius: 0 50px;
 }
+@media screen and (max-width: 440px) {
+  .main-wrapper .banner-left-image {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   .main-wrapper .banner-left-image {
     margin-top: 40px;
@@ -267,6 +287,12 @@ body {
 }
 .main-wrapper .main .maincontent-link-button:hover {
   background-color: rgb(24, 24, 24);
+}
+@media screen and (max-width: 440px) {
+  .main-wrapper .main .maincontent-link-button {
+    padding: 10px 20px;
+    font-size: 5vw;
+  }
 }
 .main-wrapper .main .maincontent .about-info {
   display: flex;
