@@ -394,7 +394,7 @@
 
 }
 
-.download-cv {
+.mailme {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -425,7 +425,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px;
     text-decoration: none;
     border: 2px solid $color-border-primary;
     border-radius: 50%;
