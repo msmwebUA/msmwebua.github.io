@@ -26,7 +26,7 @@ function showSlide(index) {
     // Add active class to current slide and indicator
     slides[currentSlide].classList.add('active');
     indicators[currentSlide].classList.add('active');
-    let activeSlideIdSeq = slides[currentSlide].id.slice(-1);
+    let activeSlideIdSeq = slides[currentSlide].id.slice(slides[currentSlide].id.lastIndexOf("_") + 1);
     document.getElementById("info-slide" + activeSlideIdSeq).classList.add('active');
 }
 
